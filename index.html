@@ -1,35 +1,159 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>COMPUMASTER - Em Construção</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CompuMaster - Tecnologia em Soluções</title>
   <style>
     body {
-      display: flex;
-      height: 100vh;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #222;
-      color: #fff;
-      justify-content: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+
+    header {
+      background: #1b1f24;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      flex-direction: column;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #00d8ff;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00d8ff;
+    }
+
+    section.hero {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    section.portfolio {
+      padding: 4rem 2rem;
+      background-color: #111;
+    }
+
+    .portfolio h3 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #00d8ff;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
       text-align: center;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.1em;
+
+    .card h4 {
+      margin-bottom: 1rem;
+      color: #00d8ff;
     }
-    p {
-      font-size: 1.5rem;
-      letter-spacing: 0.15em;
+
+    footer {
+      background: #1b1f24;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>COMPUMASTER</h1>
-  <p>AGUARDE EM CONSTRUÇÃO</p>
+  <header>
+    <h1>CompuMaster</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>Desde 2007 entregando soluções em TI</h2>
+      <p>Atendemos empresas e órgãos públicos com outsourcing de impressão, servidores Windows e Linux, infraestrutura e consultoria.</p>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <h3>Nosso Portfólio</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Outsourcing de Impressoras</h4>
+        <p>Especialistas em Ricoh, com atendimento completo e reposição de suprimentos.</p>
+      </div>
+      <div class="card">
+        <h4>Servidores Windows & Linux</h4>
+        <p>Implementação, virtualização e manutenção de servidores corporativos.</p>
+      </div>
+      <div class="card">
+        <h4>Infraestrutura de Redes</h4>
+        <p>Instalação, gerenciamento e suporte para redes locais e remotas.</p>
+      </div>
+      <div class="card">
+        <h4>Consultoria para Órgãos Públicos</h4>
+        <p>Atendimento especializado para prefeituras, escolas e instituições públicas.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contato">
+    <p>CompuMaster &copy; 2007 - 2025 | Sede em Estrela - RS | contato@compumaster.com.br</p>
+  </footer>
 </body>
 </html>
